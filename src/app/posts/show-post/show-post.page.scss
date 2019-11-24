@@ -1,0 +1,30 @@
+:host{
+    .welcome-card img {
+        max-height: 35vh;
+        overflow: hidden;
+      }
+      
+      // ion-title {
+      //   color: #aa1010 !important;
+      //   font-size: 10px !important;
+      // }
+      
+      .updatedtime{
+        font-size: 10px;
+      }
+      
+      .ioncartitle {
+        text-align: left !important;
+        font-size: 16px !important;
+      }
+      
+      .ioncartcontent {
+        text-align: left !important;
+        font-size: 10px !important;
+      }
+      
+      .ionlabeldt{
+        text-align: left !important;
+        font-size: 10px !important;
+      }
+}

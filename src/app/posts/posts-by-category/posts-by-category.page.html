@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>Posts By Category {{data[0]?.category_name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let post of postsData">
+      <ion-item class="updatedtime">Updated: {{post?.modified | date:'fullDate'}}</ion-item>
+    <div (click)="get_full_post(post?.id, data[0]?.category_name)">
+      <ion-card-subtitle>{{data[0]?.category_name}}</ion-card-subtitle>
+      <ion-img [src]="post?.fimg_url" *ngIf="data[0]?.category_name!='Tech news'"></ion-img>
+      <ion-card-header>
+        <ion-card-title class="ioncartitle" [innerHTML]="post?.title?.rendered"></ion-card-title>
+      </ion-card-header>
+      <ion-card-content class="ioncartcontent" [innerHTML]="post?.content?.rendered | slice:0:200">
+      </ion-card-content>
+      <ion-item>
+          <ion-icon slot="end" name="bookmark"></ion-icon>
+          <ion-icon slot="end" name="cloud-upload"></ion-icon>
+          <ion-label class="ionlabeldt">{{post?.date | date:'fullDate'}}</ion-label>
+      </ion-item>
+    </div>
+  </ion-card>
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Blog
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="gridbox_sec">
+    <div class="gridbox_secinn" *ngFor="let category of data; let i = index" [attr.data-index]="i">
+      <div class="categoryimg" *ngIf="i<(data.length-1)" (click)="postsByCategory(category.id,category.name)">
+          <img src="../../assets/img/gridImgVikrantTeotia{{i}}.png"/>
+        <div class="categoryicon">
+          <img src="../../assets/icon/grid_icon_vikrant_teotia{{i}}.png" />
+          <div class="card-title">{{category.name}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

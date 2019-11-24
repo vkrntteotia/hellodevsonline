@@ -1,0 +1,62 @@
+:host{
+  
+  .gridbox_sec {
+      padding: 0.5%;
+  }
+  
+  .gridbox_secinn {
+    width: 32.33%;
+    margin: 0.5%;
+    float: left;
+  }
+
+  .card-title {
+    font-size: 14px;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    float: left;
+    color: steelblue;
+    text-align: center;
+  }
+
+  .categoryimg {
+    width: 100%;
+    float: left;
+    position: relative;
+    height: 120px;
+    background: #000;
+    overflow: hidden;
+  }
+
+  .categoryimg img {
+    float: left;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .categoryicon{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: fit-content;
+  }
+  
+  .categoryicon img{
+      width: 20px;
+      margin: auto;
+      float: none;
+  }
+  
+}

@@ -1,5 +1,7 @@
 {
   "name": "hellodevsOnlineWp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
